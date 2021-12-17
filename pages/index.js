@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Login from "../components/login";
 import { useMoralis } from "react-moralis";
+import Login from "../components/Login";
 
 export default function Home() {
   const { isAuthenticated, logout } = useMoralis();
