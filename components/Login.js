@@ -5,11 +5,11 @@ const Login = () => {
   const { authenticate } = useMoralis();
 
   return (
-    <div className="relative text-white flex h-screen justify-center">
-      <div className="flex flex-col absolute z-50 h-1/2 w-2/6 items-center justify-center space-y-4 custom">
+    <div className="h-screen">
+      <div className="flex justify-center align-center ">
         <button
           onClick={authenticate}
-          className="bg-zinc-100 rounded-lg p-2 font-bold animate-pulse text-slate-500"
+          className="z-50 absolute bg-sky-100 rounded-lg p-2 font-bold animate-pulse text-slate-500"
         >
           Login to the Metaverse
         </button>
@@ -20,6 +20,7 @@ const Login = () => {
           src="https://images.unsplash.com/photo-1559251606-c623743a6d76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
           layout="fill"
           objectFit="cover"
+          alt="background image in pastel colours"
         />
       </div>
     </div>

@@ -8,9 +8,9 @@ export default function Home() {
   if (!isAuthenticated) return <Login />;
 
   return (
-    <div className="h-screen">
+    <div className="flex h-screen">
       <Head>
-        <title>Metaverse Chat</title>
+        <title>Chat</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
