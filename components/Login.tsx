@@ -35,7 +35,7 @@ const Login = () => {
               transform: "translate(-50%,50%)",
               color: "lightblue",
             }}
-            onClick={authenticate}
+            onClick={() => authenticate()}
           >
             Login to the Metaverse
           </button>

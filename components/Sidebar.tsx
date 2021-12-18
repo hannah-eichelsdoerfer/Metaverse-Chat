@@ -1,14 +1,23 @@
 import { useMoralis } from "react-moralis";
+import Avatar from "./Avatar";
+import ChangeUsername from "./ChangeUsername";
 
 const Sidebar = () => {
-  const { user } = useMoralis();
+  const { user, logout } = useMoralis();
   return (
-    <div>
-      <h1>{"I'm the Sidebar"}</h1>
-      <div>Avatar</div>
-      <div>Welcome Message</div>
-      <p>Username</p>
-      <p>Edit UserName</p>
+    <div className="text-center md:text-left">
+      <div className="relative h-32 w-32 mx-auto md:mx-0 border-grey-500 border-2 rounded-full">
+        <Avatar username={user.get("username")} />
+      </div>
+
+      <div>
+        <h1 className="text-3xl">Welcome to the Metaverse</h1>
+        <h2 className="text-2xl font-bold truncate">
+          Your Username: {user.getUsername()}
+        </h2>
+      </div>
+      <ChangeUsername />
+      <button onClick={logout}>Logout</button>
     </div>
   );
 };

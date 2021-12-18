@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useMoralis } from "react-moralis";
+import Chatroom from "../components/Chatroom";
 import Login from "../components/Login";
 
 import Sidebar from "../components/Sidebar";
@@ -12,17 +13,15 @@ export default function Home() {
   console.log(user);
 
   return (
-    <main className="h-screen overflow-y-scroll bg-gradient-to-b from-red-300 to-red-600 overlow-hidden">
+    <main className="h-screen text-stone-700 overflow-y-scroll bg-gradient-to-b from-purple-300 to-purple-100 overlow-hidden">
       <Head>
         <title>Chat</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* Sidebar with Account Info */}
-      <div className="m-auto w-2/3">
+      <div className="md:flex w-5/6 m-auto ">
         <Sidebar />
-        <h1>Hello World</h1>
-        <p>Your Account Number: {account}</p>
-        <button onClick={logout}>Logout</button>
+        <Chatroom />
       </div>
       {/* Chat */}
     </main>
