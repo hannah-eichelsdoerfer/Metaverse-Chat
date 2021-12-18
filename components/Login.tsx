@@ -2,12 +2,12 @@ import Image from "next/image";
 import { useMoralis } from "react-moralis";
 
 const Login = () => {
-  const { authenticate, isAuthenticating, isLoggingOut } = useMoralis();
+  const { authenticate, isAuthenticating, isLoggingOut } = useMoralis(); // signup(), signin()
 
   return (
     <div className="h-screen">
       <div className="flex justify-center align-center ">
-        {isAuthenticating && (
+        {isAuthenticating ? (
           <h1
             style={{
               zIndex: 50,
@@ -20,11 +20,7 @@ const Login = () => {
           >
             Authenticating...
           </h1>
-        )}
-
-        {isLoggingOut && <h1>Hi</h1>}
-
-        {authenticate && (
+        ) : (
           <button
             className={"animate-pulse bg-sky-100 rounded-lg p-2 font-bold"}
             style={{

@@ -6,14 +6,16 @@ import Login from "../components/Login";
 import Sidebar from "../components/Sidebar";
 
 export default function Home() {
-  const { isAuthenticated, logout, isLoggingOut, account, chainId, user } =
-    useMoralis();
+  const { auth, isAuthenticated } = useMoralis();
+
+  // if (isLoggingOut) {
+  //   return <h1>Bye bye... 👋🏼</h1>;
+  // }
 
   if (!isAuthenticated) return <Login />;
-  console.log(user);
 
   return (
-    <main className="h-screen text-stone-700 overflow-y-scroll bg-gradient-to-b from-purple-300 to-purple-100 overlow-hidden">
+    <main className="h-screen pt-10 text-stone-700 overflow-y-scroll bg-gradient-to-b from-purple-300 to-purple-100 overlow-hidden">
       <Head>
         <title>Chat</title>
         <link rel="icon" href="/favicon.ico" />
