@@ -17,8 +17,8 @@ const Message = ({ message }) => {
       >
         <p>{message.get("message")}</p>
       </div>
+      <span>{message.get("username")}</span>
       {/* Timestamp */}
-      <p>{message.get("username")}</p>
     </div>
   );
 };
