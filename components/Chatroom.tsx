@@ -27,13 +27,13 @@ const Chatroom = () => {
   console.log(data);
 
   return (
-    <div className="pb-56 px-10">
+    <div className="px-10">
       {/* Chatrooms */}
       {data.map((message) => (
         <Message key={message.id} message={message} />
       ))}
 
-      <div ref={lastMessageRef}>
+      <div ref={lastMessageRef} style={{ alignSelf: "end" }}>
         <SendButton lastMessageRef={lastMessageRef} />
       </div>
     </div>

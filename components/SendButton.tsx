@@ -39,14 +39,14 @@ const SendButton = ({ lastMessageRef }) => {
     <div>
       <form
         action=""
-        className="flex w-11/12 fixed bottom-10 bg-black opacity-80 px-6 py-4 max-w-2xl shadow-xl"
+        className="flex w-full  bottom-10 opacity-80 px-6 py-4 shadow-xl border-purple-300 border-2 rounded-full justify-between"
       >
         <input
           type="text"
           name=""
           id=""
           placeholder="Enter a Message"
-          className="outline-none bg-transparent border-blue-400 border-2 rounded-full px-2"
+          className="outline-none bg-transparent  px-2"
           value={message}
           ref={messageRef}
           onChange={(e) => setMessage(e.target.value)}
