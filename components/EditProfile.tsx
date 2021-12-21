@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useMoralis } from "react-moralis";
 
-const ChangeUsername = () => {
+const EditProfile = () => {
   const [showModal, setShowModal] = useState(false);
   const { setUserData, isUserUpdating, userError, user } = useMoralis();
 
@@ -23,4 +23,4 @@ const ChangeUsername = () => {
   );
 };
 
-export default ChangeUsername;
+export default EditProfile;

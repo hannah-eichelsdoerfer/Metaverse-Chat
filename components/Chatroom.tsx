@@ -24,16 +24,18 @@ const Chatroom = () => {
     }
   );
 
-  console.log(data);
-
   return (
-    <div className="px-10">
-      {/* Chatrooms */}
-      {data.map((message) => (
-        <Message key={message.id} message={message} />
-      ))}
+    <div className="px-10 w-screen">
+      <div className="h-[80vh] overflow-scroll">
+        {data.map((message) => (
+          <Message key={message.id} message={message} />
+        ))}
+      </div>
 
-      <div ref={lastMessageRef} style={{ alignSelf: "end" }}>
+      <div
+        ref={lastMessageRef}
+        style={{ position: "fixed", bottom: "1.5rem", width: "66%" }}
+      >
         <SendButton lastMessageRef={lastMessageRef} />
       </div>
     </div>

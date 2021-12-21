@@ -1,6 +1,6 @@
 import { useMoralis } from "react-moralis";
 import Avatar from "./Avatar";
-import ChangeUsername from "./ChangeUsername";
+import EditProfile from "./EditProfile";
 
 const Sidebar = () => {
   const { user, logout } = useMoralis();
@@ -16,7 +16,7 @@ const Sidebar = () => {
           Your Username: {user.getUsername()}
         </h2>
       </div>
-      <ChangeUsername />
+      <EditProfile />
       <button onClick={logout}>Logout</button>
     </div>
   );
