@@ -8,18 +8,19 @@ const EditProfile = () => {
   const setUsername = (e) => {
     e.preventDefault();
     const username = prompt(
-      `Ènter your new Username (current: ${user.getUsername()})`
+      `Enter your new Username (current: ${user.getUsername()})`
     );
+    const gender = prompt("Avatar gender:");
     if (!username) return;
-    setUserData({ username }); // shorthand for username: username
+    setUserData({ username, gender }); // shorthand for username: username
   };
 
   return (
-    <form className="text-sm ">
-      <button disabled={isUserUpdating} onClick={setUsername}>
-        Change your Username
-      </button>
-    </form>
+    // <form className="text-sm ">
+    <button disabled={isUserUpdating} onClick={setUsername}>
+      Change your Username
+    </button>
+    // </form>
   );
 };
 

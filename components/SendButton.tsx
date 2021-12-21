@@ -36,26 +36,18 @@ const SendButton = ({ lastMessageRef }) => {
   };
 
   return (
-    <div>
-      <form
-        action=""
-        className="flex w-full  bottom-10 opacity-80 px-6 py-4 shadow-xl border-purple-300 border-2 rounded-full justify-between"
-      >
-        <input
-          type="text"
-          name=""
-          id=""
-          placeholder="Enter a Message"
-          className="outline-none bg-transparent  px-2"
-          value={message}
-          ref={messageRef}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        <button type="submit" onClick={sendMessage}>
-          Send Message
-        </button>
-      </form>
-    </div>
+    <form>
+      <input
+        type="text"
+        placeholder="Enter a Message"
+        value={message}
+        ref={messageRef}
+        onChange={(e) => setMessage(e.target.value)}
+      />
+      <button type="submit" onClick={sendMessage}>
+        Send Message
+      </button>
+    </form>
   );
 };
 

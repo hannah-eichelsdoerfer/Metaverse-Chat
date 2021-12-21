@@ -3,9 +3,10 @@ import { useMoralis } from "react-moralis";
 
 const Avatar = ({ username }) => {
   const { user } = useMoralis();
+
   return (
     <Image
-      src={`https://avatars.dicebear.com/api/pixel-art/${
+      src={`https://avatars.dicebear.com/api/pixel-art/${user.get("gender")}/${
         username || user.get("username")
       }.svg`}
       layout="fill"

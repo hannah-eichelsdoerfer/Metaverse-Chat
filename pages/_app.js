@@ -1,4 +1,6 @@
 import "../styles/globals.css";
+import "../styles/chat.css";
+
 import { MoralisProvider } from "react-moralis";
 
 function MyApp({ Component, pageProps }) {
