@@ -3,7 +3,7 @@ form {
   display: flex;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
-  border: 1px solid rgb(156, 124, 154);
+  border: 1px solid #fdfdfd;
   opacity: 80;
   border-radius: 9999px;
   padding: 1rem 1.5rem;
@@ -12,7 +12,31 @@ form {
 input {
   outline: none;
   background: transparent;
-  /* padding: 0.5rem 1rem; */
+  padding: 0 1rem;
   width: 100%;
   flex: 1;
+}
+
+input::placeholder {
+  color: white;
+}
+
+main {
+  padding: 2rem 3rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.message {
+  border-radius: 9999px;
+  backdrop-filter: blur(5px);
+  color: #ac888e;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  text-align: right;
 }
