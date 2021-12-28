@@ -13,19 +13,20 @@ export default function Home() {
   // }
 
   if (!isAuthenticated) return <Login />;
-
+  // bg-gradient-to-b from-purple-300 to-purple-100bg-gradient-to-b from-purple-300 to-purple-100
+  // text-slate-100
   return (
-    <main className="h-screen pt-10 text-stone-700 overflow-y-scroll bg-gradient-to-b from-purple-300 to-purple-100 overlow-hidden">
+    <div className="h-screen pt-10 bg-[url('https://images.unsplash.com/photo-1559251606-c623743a6d76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')]">
       <Head>
         <title>Chat</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="md:flex w-5/6 m-auto ">
+      <main className="md:flex w-[90%] md:w-[85%] m-auto">
         <Sidebar />
         <Chat />
-      </div>
-    </main>
+      </main>
+    </div>
 
     // <footer></footer>
   );

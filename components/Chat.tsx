@@ -25,36 +25,16 @@ const Chat = () => {
   );
 
   return (
-    <div className="mx-5">
-      <div className="h-[80vh] overflow-scroll mx-3">
+    <div className="basis-3/4" id="chat">
+      <div className="h-[70vh] overflow-scroll pr-10 flex flex-col">
         {data.map((message) => (
           <Message key={message.id} message={message} />
         ))}
-        {/* <div
-          ref={lastMessageRef}
-          className="pb-10"
-        >{`You're up to date ${user.get("username")} 🎉`}</div> */}
-        <div ref={lastMessageRef} className="pb-10" />
+        <div ref={lastMessageRef} />
       </div>
 
-      {/* <div> */}
       <SendButton lastMessageRef={lastMessageRef} />
-      {/* </div> */}
     </div>
-    // <div className="px-10 w-screen">
-    //   <div className="h-[80vh] overflow-scroll">
-    //     {data.map((message) => (
-    //       <Message key={message.id} message={message} />
-    //     ))}
-    //   </div>
-
-    //   <div
-    //     ref={lastMessageRef}
-    //     style={{ position: "fixed", bottom: "1.5rem", width: "66%" }}
-    //   >
-    //     <SendButton lastMessageRef={lastMessageRef} />
-    //   </div>
-    // </div>
   );
 };
 

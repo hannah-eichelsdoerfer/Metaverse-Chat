@@ -8,38 +8,24 @@ const Message = ({ message }) => {
     message.get("ethAddress") === user.get("ethAddress");
 
   return (
-    <div>
-      {message.get("message")}{" "}
-      <TimeAgo
-        datetime={message.createdAt}
-        className={`text-[10px] italic text-gray-400 pr-2`}
-      />
-      <span>{message.get("username")}</span>
-    </div>
-    // <div
-    //   className={`p-3 flex ${
-    //     isCurrentUserMessage && "justify-end"
-    //   }  text-right`}
-    // >
-    //   <div>
-    //     <div
-    //       className={`p-3 rounded-lg ${
-    //         isCurrentUserMessage
-    //           ? " bg-slate-300 rounded-br-none"
-    //           : "bg-rose-200 rounded-bl-none"
-    //       }`}
-    //     >
-    //       <p>{message.get("message")}</p>
-    //     </div>
-    //     <div>
-    //       <TimeAgo
-    //         datetime={message.createdAt}
-    //         className={`text-[10px] italic text-gray-400 pr-2`}
-    //       />
-    //       <span>{message.get("username")}</span>
-    //     </div>
-    //   </div>
-    // </div>
+    <>
+      <div className={`flex ${isCurrentUserMessage && "justify-end mb-5 "} `}>
+        <p
+          className={`message p-3 ${
+            isCurrentUserMessage ? "rounded-br-none" : "rounded-bl-none"
+          }`}
+        >
+          {message.get("message")}
+        </p>
+      </div>
+      <div className="text-right">
+        <TimeAgo
+          datetime={message.createdAt}
+          className={`text-[10px] italic text-slate-100 pr-2`}
+        />
+        <span>{message.get("username")}</span>
+      </div>
+    </>
   );
 };
 
