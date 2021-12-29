@@ -16,13 +16,13 @@ export default function Home() {
   // bg-gradient-to-b from-purple-300 to-purple-100bg-gradient-to-b from-purple-300 to-purple-100
   // text-slate-100
   return (
-    <div className="h-screen pt-10 bg-[url('https://images.unsplash.com/photo-1559251606-c623743a6d76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')]">
+    <div className="h-screen pt-10 bg-[url('https://images.unsplash.com/photo-1559251606-c623743a6d76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')] bg-auto">
       <Head>
         <title>Chat</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="md:flex w-[90%] md:w-[85%] m-auto">
+      <main className="lg:flex w-[90%] lg:w-[85%] m-auto gap-10">
         <Sidebar />
         <Chat />
       </main>

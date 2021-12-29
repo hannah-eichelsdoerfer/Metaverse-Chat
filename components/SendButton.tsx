@@ -1,5 +1,6 @@
 import { MouseEvent, useRef, useState } from "react";
 import { ReactMoralisError, useMoralis } from "react-moralis";
+import { AiOutlineSend } from "react-icons/ai";
 
 const SendButton = ({ lastMessageRef }) => {
   const { Moralis, user } = useMoralis();
@@ -45,7 +46,7 @@ const SendButton = ({ lastMessageRef }) => {
         onChange={(e) => setMessage(e.target.value)}
       />
       <button type="submit" onClick={sendMessage}>
-        Send Message
+        <AiOutlineSend />
       </button>
     </form>
   );

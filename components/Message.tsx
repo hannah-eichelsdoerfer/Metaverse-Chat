@@ -9,20 +9,24 @@ const Message = ({ message }) => {
 
   return (
     <>
-      <div className={`flex ${isCurrentUserMessage && "justify-end mb-5 "} `}>
+      <div className={`flex ${isCurrentUserMessage && "justify-end"}`}>
+        <TimeAgo
+          datetime={message.createdAt}
+          className={`text-[10px] italic text-zinc-800 self-end ${
+            isCurrentUserMessage ? "pr-2" : "order-last pl-2"
+          }`}
+        />
         <p
-          className={`message p-3 ${
+          className={`message px-4 py-1 ${
             isCurrentUserMessage ? "rounded-br-none" : "rounded-bl-none"
           }`}
         >
           {message.get("message")}
         </p>
       </div>
-      <div className="text-right">
-        <TimeAgo
-          datetime={message.createdAt}
-          className={`text-[10px] italic text-slate-100 pr-2`}
-        />
+      <div
+        className={`mb-5 text-[12px] ${isCurrentUserMessage && "text-right "}`}
+      >
         <span>{message.get("username")}</span>
       </div>
     </>
