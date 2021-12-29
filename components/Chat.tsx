@@ -26,7 +26,7 @@ const Chat = () => {
 
   return (
     <div className="basis-3/4" id="chat">
-      <div className="h-[45vh] lg:h-[70vh] overflow-scroll px-10 flex flex-col">
+      <div className="h-[45vh] lg:h-[70vh] overflow-scroll px-3 lg:px-10 flex flex-col">
         {data.map((message) => (
           <Message key={message.id} message={message} />
         ))}

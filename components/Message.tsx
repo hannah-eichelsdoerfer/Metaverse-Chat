@@ -25,7 +25,9 @@ const Message = ({ message }) => {
         </p>
       </div>
       <div
-        className={`mb-5 text-[12px] ${isCurrentUserMessage && "text-right "}`}
+        className={`mb-5 text-[12px] ${
+          isCurrentUserMessage ? "text-right pr-3" : "pl-3"
+        }`}
       >
         <span>{message.get("username")}</span>
       </div>

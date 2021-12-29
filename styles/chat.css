@@ -34,7 +34,7 @@ main {
 
 .message {
   border-radius: 9999px;
-  /* background: rgba(255, 255, 255, 0.2); */
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
   color: rgb(70, 70, 70);
   transition: all 0.2s ease-in-out;
